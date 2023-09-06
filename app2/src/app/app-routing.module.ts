@@ -6,8 +6,9 @@ import { OrdersComponent } from './orders/orders.component';
 import { NotFoundPageComponent } from './not-found-page/not-found-page.component';
 
 const routes: Routes = [
+  {path:'', redirectTo:'/home', pathMatch:'full'},
   {path:'home', component:HomeComponent},
-  {path:'customer', component:CustomerComponent},
+  {path:'customer/:data', component:CustomerComponent},
   {path:'orders', component:OrdersComponent},
   {path:'**', component:NotFoundPageComponent}
 ];

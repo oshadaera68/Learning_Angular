@@ -1,7 +1,11 @@
 <header>
-    <button routerLink="/home" routerLinkActive="active">Home</button> | 
-    <button routerLink="/customer" routerLinkActive="active">Customer</button> | 
-    <button routerLink="/orders" routerLinkActive="active">Order</button> |
+  <button routerLink="/home" routerLinkActive="active">Home</button>
+  |
+  <button routerLink="/customer/{{value}}" routerLinkActive="active">Customer</button>
+  |
+  <button routerLink="/orders" routerLinkActive="active">Order</button>
+  |
+  <input type="text" placeholder="type here" [(ngModel)]="value" style="padding: 8px">
 </header>
 
 <hr>
