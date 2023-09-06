@@ -19,5 +19,5 @@ export class HomeComponent {
   // width=400;
 
     /* Two Way Data Binding */
-    name:string = '';
+    // name:string = '';
 }
