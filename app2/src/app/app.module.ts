@@ -8,6 +8,9 @@ import { FormsModule } from '@angular/forms';
 import { CustomerComponent } from './customer/customer.component';
 import { OrdersComponent } from './orders/orders.component';
 import { NotFoundPageComponent } from './not-found-page/not-found-page.component';
+import { NewComponent } from './orders/inner-items/new/new.component';
+import { DeleteComponent } from './orders/inner-items/delete/delete.component';
+import { GetComponent } from './orders/inner-items/get/get.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +18,10 @@ import { NotFoundPageComponent } from './not-found-page/not-found-page.component
     HomeComponent,
     CustomerComponent,
     OrdersComponent,
-    NotFoundPageComponent
+    NotFoundPageComponent,
+    NewComponent,
+    DeleteComponent,
+    GetComponent
   ],
   imports: [
     BrowserModule,
