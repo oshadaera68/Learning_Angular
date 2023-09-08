@@ -10,6 +10,7 @@ import { StarterMainServicesComponent } from './components/starter-home-context/
 import { StarterPricingComponent } from './components/starter-pricing/starter-pricing.component';
 import { StarterHomeContextComponent } from './components/starter-home-context/starter-home-context.component';
 import { RouterModule } from '@angular/router';
+import { ConsoleComponent } from '../console/console.component';
 
 @NgModule({
   declarations: [
@@ -19,12 +20,8 @@ import { RouterModule } from '@angular/router';
     StarterMainSliderComponent,
     StarterMainServicesComponent,
     StarterPricingComponent,
-    StarterHomeContextComponent
+    StarterHomeContextComponent,
   ],
-  imports: [
-    CommonModule,
-    StarterRoutingModule,
-    RouterModule
-  ]
+  imports: [CommonModule, StarterRoutingModule, RouterModule],
 })
-export class StarterModule { }
+export class StarterModule {}
