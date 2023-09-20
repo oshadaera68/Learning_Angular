@@ -2,6 +2,7 @@ import {Component} from '@angular/core';
 import {FormControl, FormGroup, Validators} from "@angular/forms";
 import {HttpClient} from "@angular/common/http";
 import {MatSnackBar} from "@angular/material/snack-bar";
+import {PostService} from "../../services/post.service";
 
 
 @Component({
@@ -19,25 +20,25 @@ export class NewComponent {
     body: new FormControl('', Validators.required)
   })
 
-  constructor(private http: HttpClient,private _snackBar: MatSnackBar) {
+  constructor(private postService: PostService, private http: HttpClient, private _snackBar: MatSnackBar) {
   }
 
   createData() {
-    this.http.post<any>("https://jsonplaceholder.typicode.com/posts", {
-      id: this.form.get('id')?.value,
-      userId: this.form.get('userId')?.value,
-      title: this.form.get('title')?.value,
-      body: this.form.get('body')?.value
-    })
+    this.postService.create(
+      this.form.get('id')?.value,
+      this.form.get('userId')?.value,
+      this.form.get('title')?.value,
+      this.form.get('body')?.value
+    )
       .subscribe(response => {
-      if (response){
-        this._snackBar.open('saved', 'close', {
-          horizontalPosition:'end',
-          verticalPosition:'bottom',
-          duration:5000,
-          direction:'ltr',
-        })
-      }
+        if (response) {
+          this._snackBar.open('saved', 'close', {
+            horizontalPosition: 'end',
+            verticalPosition: 'bottom',
+            duration: 5000,
+            direction: 'ltr',
+          })
+        }
       });
   }
 }
