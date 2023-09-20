@@ -10,26 +10,35 @@ import {DeleteComponent} from './components/delete/delete.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {FindComponent} from './components/find/find.component';
 import {MatButtonModule} from "@angular/material/button";
-import {HttpClient, HttpClientModule} from "@angular/common/http";
+import {HttpClientModule} from "@angular/common/http";
+import {MatInputModule} from "@angular/material/input";
+import {MatFormFieldModule} from "@angular/material/form-field";
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
+import {MatSnackBar, MatSnackBarModule} from "@angular/material/snack-bar";
 
 @NgModule({
-    declarations: [
-        AppComponent,
-        AllComponent,
-        NewComponent,
-        UpdateComponent,
-        DeleteComponent,
-        FindComponent
-    ],
-    imports: [
-        BrowserModule,
-        AppRoutingModule,
-        BrowserAnimationsModule,
-        MatButtonModule,
-        HttpClientModule
-    ],
-    providers: [],
-    bootstrap: [AppComponent]
+  declarations: [
+    AppComponent,
+    AllComponent,
+    NewComponent,
+    UpdateComponent,
+    DeleteComponent,
+    FindComponent
+  ],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    MatButtonModule,
+    HttpClientModule,
+    MatFormFieldModule,
+    MatInputModule,
+    FormsModule,
+    ReactiveFormsModule,
+    MatSnackBarModule
+  ],
+  providers: [],
+  bootstrap: [AppComponent]
 })
 export class AppModule {
 }
