@@ -1,8 +1,7 @@
 import {Component} from '@angular/core';
 import {FormControl, FormGroup, Validators} from "@angular/forms";
-import {HttpClient} from "@angular/common/http";
-import {MatSnackBar} from "@angular/material/snack-bar";
 import {PostService} from "../../services/post.service";
+import {SnackbarService} from "../../services/snackbar.service";
 
 
 @Component({
@@ -20,7 +19,8 @@ export class NewComponent {
     body: new FormControl('', Validators.required)
   })
 
-  constructor(private postService: PostService, private http: HttpClient, private _snackBar: MatSnackBar) {
+  constructor(private postService: PostService,
+              private _snackBar: SnackbarService) {
   }
 
   createData() {
@@ -32,12 +32,7 @@ export class NewComponent {
     )
       .subscribe(response => {
         if (response) {
-          this._snackBar.open('saved', 'close', {
-            horizontalPosition: 'end',
-            verticalPosition: 'bottom',
-            duration: 5000,
-            direction: 'ltr',
-          })
+          this._snackBar.trigger('saved', 'close')
         }
       });
   }

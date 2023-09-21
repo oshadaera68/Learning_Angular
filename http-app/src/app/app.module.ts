@@ -16,6 +16,8 @@ import {MatFormFieldModule} from "@angular/material/form-field";
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {MatSnackBar, MatSnackBarModule} from "@angular/material/snack-bar";
 import {MatIconModule} from "@angular/material/icon";
+import { LoadingComponent } from './components/loading/loading.component';
+import {MatProgressSpinnerModule} from "@angular/material/progress-spinner";
 
 @NgModule({
   declarations: [
@@ -24,7 +26,8 @@ import {MatIconModule} from "@angular/material/icon";
     NewComponent,
     UpdateComponent,
     DeleteComponent,
-    FindComponent
+    FindComponent,
+    LoadingComponent
   ],
   imports: [
     BrowserModule,
@@ -37,7 +40,8 @@ import {MatIconModule} from "@angular/material/icon";
     FormsModule,
     ReactiveFormsModule,
     MatSnackBarModule,
-    MatIconModule
+    MatIconModule,
+    MatProgressSpinnerModule
   ],
   providers: [],
   bootstrap: [AppComponent]
