@@ -2,6 +2,7 @@ import {Component} from '@angular/core';
 import {FormControl, FormGroup, Validators} from "@angular/forms";
 import {PostService} from "../../services/post.service";
 import {SnackbarService} from "../../services/snackbar.service";
+import Post from "../../dto/Post";
 
 
 @Component({
@@ -24,7 +25,7 @@ export class NewComponent {
   }
 
   createData() {
-    this.postService.create(
+    /*this.postService.create(
       this.form.get('id')?.value,
       this.form.get('userId')?.value,
       this.form.get('title')?.value,
@@ -34,6 +35,15 @@ export class NewComponent {
         if (response) {
           this._snackBar.trigger('saved', 'close')
         }
-      });
+      });*/
+
+    let post = new Post(
+      this.form.get('id')?.value!,
+      this.form.get('userId')?.value!,
+      this.form.get('title')?.value!,
+      this.form.get('body')?.value!
+    );
+
+    this.postService.createDataFireStore(post).then()
   }
 }

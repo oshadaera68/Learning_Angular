@@ -14,17 +14,17 @@ export class DeleteComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.postService.findAll()
+    /*this.postService.findAll()
       .subscribe(response => {
         console.log(response)
         this.list = response;
         console.log(this.list)
-      });
+      });*/
   }
 
   delete(id: any) {
     if (confirm('are you sure ' + id)) {
-      this.postService.delete(id).subscribe(response => {
+      /*this.postService.delete(id).subscribe(response => {
         if (response) {
           this._snackBar.trigger('deleted', 'close',)
 
@@ -35,7 +35,7 @@ export class DeleteComponent implements OnInit {
             }
           }
         }
-      });
+      });*/
     }
   }
 }

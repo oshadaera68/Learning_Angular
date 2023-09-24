@@ -25,7 +25,7 @@ export class UpdateComponent {
   }
 
   updateData() {
-    this.postService.update(
+    /*this.postService.update(
       this.form.get('id')?.value,
       this.form.get('userId')?.value,
       this.form.get('title')?.value,
@@ -35,7 +35,7 @@ export class UpdateComponent {
         if (response) {
           this._snackBar.trigger('updated', 'close')
         }
-      });
+      });*/
   }
 
   loadData() {
