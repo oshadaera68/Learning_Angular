@@ -1,4 +1,4 @@
-import {AfterContentChecked, AfterContentInit, Component} from '@angular/core';
+import {Component} from '@angular/core';
 
 
 @Component({
@@ -6,19 +6,19 @@ import {AfterContentChecked, AfterContentInit, Component} from '@angular/core';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent implements AfterContentInit,AfterContentChecked {
+export class AppComponent {
   title = 'app1';
-
+  simpleText: string = ''
   // @Input() inputText: string | undefined
-  text: string = ''
+  // text: string = ''
 
-  ngAfterContentInit(): void {
-    console.log('ngAfterContentInit')
-  }
+  /*  ngAfterContentInit(): void {
+      console.log('ngAfterContentInit')
+    }
 
-  ngAfterContentChecked(): void {
-    console.log('ngAfterContentChecked')
-  }
+    ngAfterContentChecked(): void {
+      console.log('ngAfterContentChecked')
+    }*/
 
   /*  ngDoCheck(): void {
       console.log(this.text)
