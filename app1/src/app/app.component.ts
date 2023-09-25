@@ -1,5 +1,7 @@
 import {Component} from '@angular/core';
-import {LkrPipe} from "./pipes/LkrPipe";
+import {AngularFireAuth} from "@angular/fire/compat/auth";
+import firebase from "firebase/compat";
+import GoogleAuthProvider = firebase.auth.GoogleAuthProvider;
 
 
 @Component({
@@ -9,7 +11,16 @@ import {LkrPipe} from "./pipes/LkrPipe";
 })
 export class AppComponent {
   title = 'app1';
-  option: any = 'A';
 
 
+  constructor(private auth: AngularFireAuth) {
+  }
+
+  async trigger() {
+    try {
+      const data = await this.auth.signInWithPopup(new GoogleAuthProvider());
+    }catch (e){
+      console.log(e)
+    }
+  }
 }

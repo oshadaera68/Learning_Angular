@@ -5,6 +5,9 @@ import {AppComponent} from './app.component';
 import {FormsModule} from "@angular/forms";
 import {AppRoutingModule} from './app-routing.module';
 import {LkrPipe} from "./pipes/LkrPipe";
+import {AngularFireModule} from "@angular/fire/compat";
+import {AngularFireAuthModule} from "@angular/fire/compat/auth";
+import {environment} from "../environments/environment";
 
 @NgModule({
   declarations: [
@@ -14,7 +17,9 @@ import {LkrPipe} from "./pipes/LkrPipe";
   imports: [
     BrowserModule,
     FormsModule,
-    AppRoutingModule
+    AppRoutingModule,
+    AngularFireModule.initializeApp(environment.firebaseConfig),
+    AngularFireAuthModule
   ],
   providers: [],
   bootstrap: [AppComponent]
