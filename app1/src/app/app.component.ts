@@ -1,4 +1,5 @@
 import {Component} from '@angular/core';
+import {LkrPipe} from "./pipes/LkrPipe";
 
 
 @Component({
@@ -8,38 +9,7 @@ import {Component} from '@angular/core';
 })
 export class AppComponent {
   title = 'app1';
-  simpleText: string = ''
-  // @Input() inputText: string | undefined
-  // text: string = ''
+  option: any = 'A';
 
-  /*  ngAfterContentInit(): void {
-      console.log('ngAfterContentInit')
-    }
 
-    ngAfterContentChecked(): void {
-      console.log('ngAfterContentChecked')
-    }*/
-
-  /*  ngDoCheck(): void {
-      console.log(this.text)
-    }*/
-
-  /*ngOnChanges(changes: SimpleChanges): void {
-    if (changes['inputText']) {
-      this.text = '**' + changes['inputText'].currentValue
-    }
-  }*/
-
-  /*constructor() {
-    setTimeout(()=>{
-      this.text='nimal';
-    },2000)
-
-  }*/
-
-  /*  ngOnInit(): void {
-      setTimeout(()=>{
-        this.text='bandara';
-      },3000)
-    }*/
 }

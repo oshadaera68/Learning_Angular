@@ -1,3 +1,14 @@
-<input type="text" [(ngModel)]="simpleText" >
-<hr>
-<app-child [message]="simpleText"></app-child>
+<select name="" id="" [(ngModel)]="option">
+  <option value="A">A</option>
+  <option value="B">B</option>
+  <option value="C">C</option>
+  <option value="D">D</option>
+  <option value="E">E</option>
+</select>
+
+<div [ngSwitch]="option">
+  <div *ngSwitchCase="'A'">Option A</div>
+  <div *ngSwitchCase="'B'">Option B</div>
+  <div *ngSwitchCase="'C'">Option C</div>
+  <div *ngSwitchCase="'D'">Option D</div>
+</div>
