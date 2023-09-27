@@ -12,4 +12,8 @@ export class LoginComponent {
     password:new FormControl('', [Validators.required])
   });
 
+  login(){
+    console.log(this.loginForm.get('email')?.value)
+    console.log(this.loginForm.get('password')?.value)
+  }
 }

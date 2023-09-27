@@ -1,28 +1,30 @@
-<div class="outer">
-  <div class="inner">
+<form [formGroup]="loginForm" (ngSubmit)="login()" >
+  <div class="outer">
+    <div class="inner">
 
-    <h3 style="text-align: center">Login</h3>
+      <h3 style="text-align: center">Login</h3>
 
-    <mat-form-field class="form-field" appearance="outline">
-      <mat-label>Email</mat-label>
-      <input matInput type="email" placeholder="Enter Your Email">
-    </mat-form-field>
+      <mat-form-field class="form-field" appearance="outline">
+        <mat-label>Email</mat-label>
+        <input formControlName="email" matInput type="email" placeholder="Enter Your Email">
+      </mat-form-field>
 
-    <mat-form-field class="form-field" appearance="outline">
-      <mat-label>Password</mat-label>
-      <input matInput type="password" placeholder="Enter Your Email">
-    </mat-form-field>
+      <mat-form-field class="form-field" appearance="outline">
+        <mat-label>Password</mat-label>
+        <input formControlName="password" matInput type="password" placeholder="Enter Your Email">
+      </mat-form-field>
 
-    <button mat-raised-button color="primary" type="submit" class="submit-login" [disabled]="loginForm?.invalid">Login</button>
+      <button mat-raised-button color="primary" type="submit"
+              class="submit-login" [disabled]="loginForm?.invalid">Login</button>
 
-    <hr>
-    <p class="text">Or Sign in with</p>
-    <div class="social-outer">
-      <button mat-fab>FB</button>
-      <button mat-fab>Google</button>
-      <button mat-fab>Git</button>
-      <button mat-fab>Twitter</button>
+      <hr>
+      <p class="text">Or Sign in with</p>
+      <div class="social-outer">
+        <button mat-fab>FB</button>
+        <button mat-fab>Google</button>
+        <button mat-fab>Git</button>
+        <button mat-fab>Twitter</button>
+      </div>
     </div>
-
   </div>
-</div>
+</form>
