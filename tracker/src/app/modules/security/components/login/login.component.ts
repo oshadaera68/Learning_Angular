@@ -1,7 +1,8 @@
 import { Component } from '@angular/core';
 import {FormControl, FormGroup, Validators} from "@angular/forms";
 import {AngularFireAuth} from "@angular/fire/compat/auth";
-import {GoogleAuthProvider} from "firebase/auth"
+import {GoogleAuthProvider } from "firebase/auth";
+
 
 
 @Component({
@@ -28,7 +29,7 @@ export class LoginComponent {
       .then(response=>{
         console.log(response)
       }).catch(error=>{
-
+      console.log(error)
     })
   }
 }

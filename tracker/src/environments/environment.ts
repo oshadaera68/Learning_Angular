@@ -1,5 +1,5 @@
 export const environment = {
-  production:true,
+  production:false,
   firebaseConfig : {
     apiKey: "AIzaSyDJWFUrgv86FArh2gYLQ-H_HbBwyJZO2m0",
     authDomain: "tracker-app-e18dd.firebaseapp.com",
